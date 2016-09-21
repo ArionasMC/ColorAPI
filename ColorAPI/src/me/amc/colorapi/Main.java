@@ -12,14 +12,6 @@ public class Main extends JavaPlugin {
 		
 		if(!this.isEnabled()) return;
 		
-		for(Plugin plugin : this.getServer().getPluginManager().getPlugins()) {
-			if(plugin.getDescription().getDepend().contains("ColorAPI")) {
-				if(plugin.isEnabled()) {
-					this.getLogger().log(Level.INFO, "Successfully hooked "+plugin.getDescription().getName()+" !");
-				}
-			}
-		}
-		
 		this.getLogger().log(Level.INFO, "Successfully enabled "+this.getDescription().getName()+" v"+this.getDescription().getVersion()+" !");
 		
 	}
