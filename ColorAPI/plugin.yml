@@ -1,0 +1,4 @@
+name: ColorAPI
+version: 0.5
+main: me.amc.colorapi.Main
+description: A simple useful API for coloring your items.
