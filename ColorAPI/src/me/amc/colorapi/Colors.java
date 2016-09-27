@@ -20,6 +20,7 @@ public enum Colors {
 	Black(15);
 
 	private final int id;
+	private static final HashMap<String, Colors> colorsMap = new HashMap<>();
 
 	Colors(int id) {
 		this.id = id;
@@ -27,6 +28,20 @@ public enum Colors {
 
 	public int getId() {
 		return this.id;
+	}
+	
+	static {
+		for(Colors c : Colors.values()) {
+			colorsMap.put(c.toString(), c);
+		}
+	}
+	
+	public static Colors getByName(String name) {
+		if(colorsMap.containsKey(name)) {
+			return colorsMap.get(name);
+		} else {
+			return White;
+		}
 	}
 
 }
